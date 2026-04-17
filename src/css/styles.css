@@ -1,9 +1,105 @@
 /**
   |============================
-  | include css partials with
-  | default @import url()
+  | include css partials
   |============================
 */
-/* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
+
+/* Контейнер для формы и галереи */
+.container {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Форма поиска */
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+  margin-bottom: 32px;
+}
+
+/* Стили для галереи */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  justify-content: flex-start;
+}
+
+/* Карточка изображения */
+.gallery-item {
+ width: calc((100% - 96px) / 5);
+ flex-shrink: 0; 
+  border: 1px solid #808080;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+/* Блок со статистикой под фото */
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 0;
+  background-color: #fff;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #2e2f42;
+}
+
+.info-item b {
+  font-weight: 600;
+}
+
+/* Кнопка */
+.hidden {
+  display: none !important;
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto 32px;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.load-more:hover {
+  background-color: #6c8cff;
+}
+
+.loader {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
